@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Phần mềm nhập liệu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-section { margin-top: 20px; }
+        .image-label { font-weight: bold; }
+    </style>
+</head>
+<body class="container">
+    <h2 class="my-4">Phần mềm nhập liệu</h2>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-section">
+                    <label>Date (dd/mm/yyyy)</label>
+                    <input type="text" name="date" class="form-control">
+                </div>
+                <div class="form-section">
+                    <label>Số PBH</label>
+                    <input type="text" name="pbh" class="form-control">
+                </div>
+                <div class="form-section">
+                    <label>Tên HUB</label>
+                    <input type="text" name="hub" class="form-control">
+                </div>
+                <div class="form-section">
+                    <label>Mã LK</label>
+                    <input type="text" name="ma_lk" class="form-control">
+                </div>
+                <div class="form-section">
+                    <label>Mô tả LK</label>
+                    <input type="text" name="mo_ta_lk" class="form-control">
+                </div>
+                <div class="form-section">
+                    <label>Số Lượng</label>
+                    <input type="text" name="so_luong" class="form-control">
+                </div>
+                <div class="form-section">
+                    <label>Serial máy</label>
+                    <input type="text" name="serial_may" class="form-control">
+                </div>
+                <div class="form-section">
+                    <label>Serial tab</label>
+                    <input type="text" name="serial_tab" class="form-control">
+                </div>
+                <div class="form-section">
+                    <label>Serial module</label>
+                    <input type="text" name="serial_module" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-section">
+                    <label class="image-label">Hình ảnh Serial máy</label>
+                    <input type="file" name="img_serial_may" class="form-control">
+                </div>
+                <div class="form-section">
+                    <label class="image-label">Hình ảnh Serial tab</label>
+                    <input type="file" name="img_serial_tab" class="form-control">
+                </div>
+                <div class="form-section">
+                    <label class="image-label">Hình ảnh Serial module</label>
+                    <input type="file" name="img_serial_module" class="form-control">
+                </div>
+                <div class="form-section mt-4">
+                    <button type="submit" class="btn btn-success">Lưu vào Excel</button>
+                    <a href="/downloads" class="btn btn-warning">Tải Excel</a>
+                </div>
+                <div class="form-section mt-2">
+                    <p><strong>Số lần đã lưu:</strong> {{ saveCount }}</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
